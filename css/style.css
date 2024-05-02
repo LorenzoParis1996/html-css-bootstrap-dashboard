@@ -24,12 +24,15 @@ header {
     width: 100%;
 }
 
+main {
+    width: calc(100% - 150px);
+}
+
 aside {
     background-color: #051e34;
     width: 150px;
     height: 100vh;
 }
-
 
 
 #new-students {
