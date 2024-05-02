@@ -2,19 +2,37 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.white-font {
+    color: white;
+}
+
 header {
     background-color: #f8f9fa;
 }
 
 .large_searchbar {
-    min-width: 450px;
-    width: 100% !important;
+    min-width: 300px;
+    width: 100%;
 }
+
 
 .mobile-logo {
-    width: 50px;
+    max-width: 50px;
 }
 
-.mobile-logo img {
+.logo img {
     width: 100%;
+}
+
+aside {
+    background-color: #051e34;
+    width: 150px;
+    height: 100vh;
+}
+
+
+
+#new-students {
+    background-color: #1b72e8;
+
 }

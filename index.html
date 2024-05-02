@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontawesome 6.5.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -19,21 +23,72 @@
     <header>
         <section>
             <nav class="container-fluid py-3">
-                <div class="mobile-logo">
-                    <img src="./img/mobile-logo.png" alt="">
-                </div>
 
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 form-control-lg large_searchbar" type="search"
+                <form class="d-flex align-items-center" role="search">
+                    <div class="logo px-2">
+                        <img src="./img/logo.svg" alt="logo">
+                    </div>
+                    <input class="form-control me-2 form-control-md large_searchbar" type="search"
                         placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
-                    <div>campana</div>
+                    <i class="fa-solid fa-bars px-2"></i>
+                    <i class="fa-solid fa-circle-question px-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical px-2"></i>
+                    <i class="fa-solid fa-bell px-2"></i>
                 </form>
 
             </nav>
         </section>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <div class="d-flex">
+        <aside class="white-font p-3">
+
+            <nav>
+                <div>icona Home</div>
+                <div>icona Stats</div>
+                <div>icona Signal</div>
+            </nav>
+            <nav>
+                <div>icona Admin</div>
+            </nav>
+        </aside>
+
+
+        <main>
+
+            <section id="new-students" class="container white-font py-3">
+                <div class="row">
+                    <div class="col-12 d-flex">
+                        <div class="px-4">
+                            <p>Boolean <span>Piano blaze</span></p>
+                            <ul class="list-unstyled d-flex">
+                                <li>3 app</li>
+                                <li class="px-1"><i>frecce</i></li>
+                                <li class="px-1">Boolean app mobile</li>
+                                <li class="px-1">Boolean web app</li>
+                                <li class="px-1">Boolean blog app</li>
+                            </ul>
+                        </div>
+                        <div class="px-4">
+                            <p>Studenti online negli ultimi 30 minuti</p>
+                            <p>125</p>
+                        </div>
+                        <div class="px-4">
+                            <p>nuovo studente <i>icona</i></p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
 
 
 
