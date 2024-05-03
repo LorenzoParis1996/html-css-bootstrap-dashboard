@@ -43,3 +43,13 @@ aside {
 table {
     font-size: 13px;
 }
+
+.img-graph {
+    min-width: 200px;
+    min-height: 350px;
+}
+
+.img-graph img {
+    width: 100%;
+    object-fit: contain;
+}
