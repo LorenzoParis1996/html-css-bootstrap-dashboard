@@ -31,7 +31,7 @@ main {
 aside {
     background-color: #051e34;
     width: 150px;
-    height: 100vh;
+
 }
 
 
@@ -40,7 +40,7 @@ aside {
 
 }
 
-table {
+.my_text_size {
     font-size: 13px;
 }
 
