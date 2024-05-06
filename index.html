@@ -25,15 +25,30 @@
             <nav class="container-fluid py-3">
 
                 <form class="d-flex align-items-center" role="search">
-                    <div class="logo px-2">
-                        <img src="./img/logo.svg" alt="logo">
+                    <div class="logo px-2 d-none d-lg-inline-block">
+                        <img src="./img/logo.svg" alt="logo" class="d-none d-lg-inline-block">
+
+                    </div>
+                    <div class="mobile-logo d-inline-block d-lg-none px-2">
+                        <img src="./img/mobile-logo.png" alt="mobile logo">
                     </div>
                     <input class="form-control me-2 form-control-md large_searchbar" type="search"
                         placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
-                    <i class="fa-solid fa-bars px-2"></i>
-                    <i class="fa-solid fa-circle-question px-2"></i>
-                    <i class="fa-solid fa-ellipsis-vertical px-2"></i>
-                    <i class="fa-solid fa-bell px-2"></i>
+                    <i class="fa-solid fa-bars px-2 d-none d-lg-inline-block"></i>
+                    <i class="fa-solid fa-circle-question px-2 d-none d-lg-inline-block"></i>
+                    <i class="fa-solid fa-ellipsis-vertical px-2 d-none d-lg-inline-block"></i>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary my_dropdown_btn border border-0 bg-transparent" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell text-warning"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
                 </form>
 
             </nav>
@@ -44,20 +59,28 @@
         <aside class="white-font p-3">
 
             <nav>
-                <div>icona Home</div>
-                <div>icona Stats</div>
-                <div>icona Signal</div>
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-house p-1"></i>
+                        <span class="d-none d-lg-inline-block">House</span>
+                    <li>
+                    <li><i class="fa-solid fa-chart-simple p-1"></i>
+                        <span class="d-none d-lg-inline-block">Stats</span>
+                    </li>
+                    <li><i class="fa-solid fa-signal p-1"></i>
+                        <span class="d-none d-lg-inline-block">Signal</span>
+                    </li>
+                </ul>
             </nav>
             <nav>
-                <div>icona Admin</div>
+                <i class="fa-solid fa-gear p-1"></i><span class="d-none d-lg-inline-block">Admin</span>
             </nav>
         </aside>
 
 
         <main>
-            <section id="new-students" class=" white-font py-3">
-                <div class="d-flex justify-content-between">
-                    <div class="px-2">
+            <section id="students-stats" class=" white-font py-3">
+                <div class="d-flex justify-content-md-between flex-column flex-md-row">
+                    <div class="px-4 px-md-2 py-2 order-3 order-md-0">
                         <p>Boolean<button class="my_text_size rounded-3">Piano blaze</button></p>
                         <div class="my_text_size">
                             <button class="rounded-3">3 app</button>
@@ -68,12 +91,45 @@
                             <button class="rounded-3 d-none d-lg-inline-block">Boolean blog app</button>
                         </div>
                     </div>
-                    <div class="px-4">
+                    <div class="px-4 py-2 order-3 order-md-2">
                         <p class="my_text_size">Studenti online negli ultimi 30 minuti</p>
                         <p>125</p>
                     </div>
-                    <div class="px-4">
-                        <p>nuovo studente <i class="fa-regular fa-square-plus"></i></p>
+                    <div class="px-4 py-2 order-0 order-md-3">
+                        <p>nuovo studente
+
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                <i class="fa-solid fa-square-plus"></i>
+                            </button>
+
+                        <div class="offcanvas offcanvas-end text-dark my_students" tabindex="-1" id="offcanvasExample"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    Some text as placeholder. In real life you can have the elements you have chosen.
+                                    Like, text, images, lists, etc.
+                                </div>
+                                <div class="dropdown mt-3">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </p>
+
                     </div>
             </section>
 
@@ -81,7 +137,7 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="col-12">
-                            <section id="next-classes">
+                            <section id="next-classes" class="mt-3">
 
                                 <h3 class="border border-black">Prossime classi</h3>
                                 <table class="table border border-black my_text_size">
@@ -215,7 +271,7 @@
 
                     <div class="col-lg-4">
                         <div class="col-12">
-                            <section id="todo" class="border border-black p-2">
+                            <section id="todo" class="border border-black p-2 mt-3">
                                 <h3 class="border border-black">Todo</h3>
                                 <div class="border border-black my_text_size">
                                     <div class="form-check border-bottom border-black">
@@ -244,7 +300,7 @@
 
 
                         <div class="col-12">
-                            <section id="stats" class="border border-black p-2">
+                            <section id="stats" class="border border-black p-2 mt-3">
                                 <article class="border border-black">
                                     <div class="img-graph">
                                         <img src="./img/stats.jpeg" alt="stats">
@@ -287,12 +343,13 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -15,12 +15,19 @@ header {
     width: 100%;
 }
 
-
-.mobile-logo {
-    max-width: 50px;
+.logo {
+    max-width: 150px;
 }
 
 .logo img {
+    width: 100%;
+}
+
+.mobile-logo {
+    max-width: 60px;
+}
+
+.mobile-logo img {
     width: 100%;
 }
 
@@ -31,11 +38,10 @@ main {
 aside {
     background-color: #051e34;
     width: 150px;
-
 }
 
 
-#new-students {
+#students-stats {
     background-color: #1b72e8;
 
 }
@@ -54,6 +60,14 @@ aside {
     object-fit: contain;
 }
 
+.my_dropdown_btn {
+    background-color: #f8f9fa
+}
+
+.my_students {
+    width: 40%;
+}
+
 /*MEDIA QUERIES*/
 
 @media screen and (max-width: 992px) {
@@ -64,5 +78,11 @@ aside {
 
     aside {
         width: 75px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .my_students {
+        width: 100%;
     }
 }
